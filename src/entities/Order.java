@@ -21,9 +21,10 @@ public class Order {
 	public Order() {
 	}
 
-	public Order(Date moment, OrderStatus status) {
+	public Order(Date moment, OrderStatus status, Client client) {
 		this.moment = moment;
 		this.status = status;
+		this.client = client;
 	}
 
 	public Date getMoment() {
@@ -69,12 +70,12 @@ public class Order {
 
 		sb.append("Client: " + client.getName());
 		sb.append(" (" + sdf2.format(client.getBirthDate()) + ") - ");
-		sb.append(client.getEmail());
+		sb.append(client.getEmail() +"\n");
 
 		sb.append("Order items: " + "\n");
 		for (OrderItem item : order) {
 			sb.append(item.getProduct().getName());
-			sb.append(", $" + item.getPrice());
+			sb.append(", $" + String.format("%.2f", item.getPrice()));
 			sb.append(", Quantity: " + item.getQuantity());
 			sb.append(", Subtotal: ");
 			sb.append(String.format("%.2f", item.subTotal()) + "\n");

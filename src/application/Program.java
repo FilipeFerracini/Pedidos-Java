@@ -34,7 +34,7 @@ public class Program {
 		System.out.print("How many items to this order? ");
 		int n = sc.nextInt();
 		Date moment = new Date();
-		Order order = new Order(moment, status);
+		Order order = new Order(moment, status, client);
 
 		for (int i = 1; i <= n; i++) {
 			sc.nextLine();
