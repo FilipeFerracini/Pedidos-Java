@@ -3,7 +3,7 @@ package entities;
 import java.util.Date;
 
 public class Client {
-
+	
 	private String name;
 	private String email;
 	private Date birthDate;
@@ -39,15 +39,6 @@ public class Client {
 
 	public void setBirthDate(Date birthhDate) {
 		this.birthDate = birthhDate;
-	}
-
-	public String toString() {
-		return "Client [name=" 
-				+ name 
-				+ ", email=" 
-				+ email 
-				+ ", birthDate=" 
-				+ birthDate + "]";
 	}
 
 }
